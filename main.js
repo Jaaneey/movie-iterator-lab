@@ -22,6 +22,7 @@ function reformatRuntimes(arr) {
   // returns an array of movie data with the runtimes are in HH:MM format.
   // For example, a movie that's 90 minutes long should have a runtime of '01:30'
   return arr.map((movie, idx) => {
+    // copy the original movie object
     var newMovie = JSON.parse(JSON.stringify(movie));
     var hours = Math.floor(parseInt(movie.runtime / 60));
     var minutes = movie.runtime % 60;
